@@ -21,3 +21,4 @@ menuLinks.forEach(menuLink => {
         menu.classList.remove("menu_opened")
     })
 })
+console.log("development branch")
