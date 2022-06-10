@@ -1,95 +1,110 @@
-.briefcases123{
-    display:flex;
+.projects{
+    display: flex;
     flex-direction: column;
 }
-.briefcase-body{
+.projects-body{
     background: var(--primary-color);
-    color: var(--text-color-inverse);
+    color: white;
+
 }
-.wave{
+.wave {
     width: 100%;
     position: relative;
     top: 2px;
+
 }
-.wave-bottom{
-    transform: scale(-1);
+.wave_bottom{
+    transform: scaleY(-1);
     top: -2px;
 }
-.briefcase-title{
+.project-title{
     text-align: center;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-weight: bold;
     font-size: 30px;
     margin: 25px;
 }
-.briefcase-name{
+.project-name{
     font-size: 25px;
     font-weight: bold;
-    color: var(--borde-foto);
+    color: var(--secundary-color);
 }
-.briefcase{
-    padding: 0;
-    max-width: 350px;
+.project-date{
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+    color: red;
+}
+.project-description{
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgb(80, 6, 90);
+}
+.project a {
+    color: aqua;
+}
+.project{
+    padding: 25px;
+    /* "un ancho maximo de 500px" */
+    max-width: 500px;
     margin: 0 auto;
 }
-@media (min-width: 950px){
-    .briefcase-title{
+/* cdo tengamos de ancho + 950px se tendrá:  */
+@media (min-width:950px){
+    .project-title{
         font-size: 50px;
         margin: 35px 0;
     }
-    .briefcase-date{
-        font-size: 40px;
-    }
-    .briefcase-name{
+    .project-name{
         font-size: 25px;
         font-weight: bold;
-        color: var(--borde-foto);
+        color: var(--secundary-color);
     }
-    .description{
+    .project-date{
+        font-size: 25px;
+
+    }
+    .project-description{
         font-size: 20px;
         margin-top: 10px;
         line-height: 1.3;
     }
-    .briefcase-url{
-        color: rgba(43, 255, 0, 0.788);
-        font-weight: bold;
-        font-size: 25px;
+    .project{
+        /* Se va agregar padding con el grip */
+        padding: 0px;
     }
-    .briefcase{
-        padding: 25px;
-        max-width: 500px;
-    }
-    .briefcase_left{
-        text-align: right;
-    }
-    .briefcase-grid{
+    .project-grid{
         display: grid;
         grid-template-columns: auto 2px auto;
+        /* Cn el sig atributto se agrega un espacio que hace que el before y after estén encimados */
         gap: 20px 70px;
+        /* Se agrega un p entre ls elemts y el borde.. y elemts y la linea */
         padding: 70px;
         justify-content: center;
-        max-width: 980px;
+        max-width:980px;
+        /* el atributo anterior altera la posición... lo pone todo a la izq x lo que se utiliza el sig atribb para volver a centarlo */
         margin: 0 auto;
     }
     .line{
-        background: var(--text-color-inverse);
+        background-color: var(--text-color-inverse);
         position: relative;
     }
     .line::before,
     .line::after{
         content: "";
         display: block;
-        width: 20px;
-        height: 20px;
+        width:20px;
+        height:20px;
         background-color: var(--text-color-inverse);
         border-radius: 50%;
         position: absolute;
         top: -20px;
         left: -9px;
     }
+    /* Se suma un atributo + el top que hace bajar al circulo con lo cual ya no pisa al before */
     .line::after{
         top: 100%;
         z-index: 1;
     }
-
 }

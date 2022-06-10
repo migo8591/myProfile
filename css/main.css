@@ -3,20 +3,23 @@
     --primary-color: #124f88;
     --secundary-color: rgb(4, 51, 12);
     --borde-foto:hsl(56, 100%, 50%);
+    --line-link: hsl(209, 85%, 75%);
     --text-color-inverse: white;
     --text-color: black;
     --navbar-shallow-color: #e5e5e5;
     --menu-mobile-background-color: #3A4460;
+    --href-color: hsl(0, 100%, 40%);
 }
 html{
     scroll-behavior: smooth;
 }
+/* ls sig lineas arregla la vista de la parte de ls elementos que estan ocultas por el nav que esta fix... se seleccionan ts ls etiquetas section que tengan identificador id * Los 70px que es el alto del nav/ */
 section[id]{
     scroll-margin-top: 70px;
 }
 body{
     font-family: 'Open Sans', sans-serif;
-    /* background-color: rgb(10, 174, 224); */
+    background-color: rgb(10, 174, 224); 
     background-color: var(--theme-color);
     color: var(--text-color);
     padding-top: 70px;
