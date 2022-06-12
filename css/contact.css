@@ -1,0 +1,7 @@
+footer{
+    background-color: var(--secundary-color);
+    color: var(--theme-color);
+    padding: 1em;
+    border-radius: 0 5em;
+    font-weight: bold;
+}
